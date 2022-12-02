@@ -18,6 +18,6 @@ public class CameraRotate : MonoBehaviour
         //Create a new xyz vector coordinate, set y to slider value
         Vector3 rotateValue = new Vector3(0, mapRotate.value, 0);
         //Transform the GameObject * 60fps (delta time of the program is every frame)
-        transform.Rotate(rotateValue * Time.deltaTime);
+        transform.rotation = Quaternion.Euler(rotateValue);
     }
 }
